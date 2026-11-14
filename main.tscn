@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csk47lerbfi7a" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bvqbq02opvdn8" path="res://art/character.webp" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://bu5ga8osarts0" path="res://sound/blung.mp3" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cxcddj86nedff" path="res://art/floor.webp" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://qitc1tlt6s64" path="res://cat.gd" id="4_7mycd"]
 [ext_resource type="Texture2D" uid="uid://ebyeu8ntoo8x" path="res://art/cat.webp" id="4_lquwl"]
@@ -106,6 +107,10 @@ texture_filter = 1
 position = Vector2(0, -1)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_lquwl")
+
+[node name="SchirmSound" type="AudioStreamPlayer" parent="Cat" unique_id=518149947]
+stream = ExtResource("3_h2yge")
+pitch_scale = 4.0
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2118025122]
 
