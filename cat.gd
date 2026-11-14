@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = BOUNCE_VELOCITY
 
 			# Optional: angle the bounce depending on where the cat hits the umbrella
-			if collider.name == "player":
+			if collider.name == "Player":
 				$SchirmSound.pitch_scale = randf_range(0.9, 1.1)
 				$SchirmSound.play()
 				var offset: float = global_position.x - collider.global_position.x
