@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = BOUNCE_VELOCITY
 
 			# Optional: angle the bounce depending on where the cat hits the umbrella
-			if collider.name == "player":
+			if collider.name == "Player":
 				var offset: float = global_position.x - collider.global_position.x
 				velocity.x = clamp(offset * 4.0, -HORIZONTAL_SPEED, HORIZONTAL_SPEED)
 				if abs(velocity.x) < 20.0:
