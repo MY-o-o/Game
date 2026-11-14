@@ -8,21 +8,24 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tm2a6"]
 size = Vector2(180, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(10, 240)
+
 [node name="Node" type="Node" unique_id=1118593001]
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=788137170]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=788137170]
 position = Vector2(95.99999, 145)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("1_0xm2m")
 metadata/_edit_group_ = true
 
-[node name="Character" type="Sprite2D" parent="player" unique_id=1041302682]
+[node name="Character" type="Sprite2D" parent="Player" unique_id=1041302682]
 texture_filter = 1
 position = Vector2(-9.1552734e-05, -6.1035156e-05)
 scale = Vector2(4.9999995, 4.9999995)
 texture = ExtResource("3_1bvp3")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player" unique_id=360876611]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player" unique_id=360876611]
 position = Vector2(13.646666, -16.084219)
 polygon = PackedVector2Array(66.35329, -8.915815, 66.35329, -23.915815, 6.3532944, -63.91581, -38.6467, -63.91581, -93.6467, -23.915815, -93.6467, -8.915815, -18.646704, -8.915815, -18.646704, 61.084175, 1.3532944, 96.084175, 36.353294, 96.084175)
 
@@ -43,3 +46,13 @@ texture_filter = 1
 position = Vector2(41, 79)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_lquwl")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=127130116]
+
+[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=286234244]
+position = Vector2(185, 90)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1153685113]
+position = Vector2(-5, 90)
+shape = SubResource("RectangleShape2D_1bvp3")
