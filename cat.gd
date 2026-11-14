@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const HORIZONTAL_SPEED = 100.0
-const BOUNCE_VELOCITY = -400.0
+const HORIZONTAL_SPEED = 75.0
+const BOUNCE_VELOCITY = -350.0
 
 func _ready() -> void:
 	# Start moving right (or left)
@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	# Apply gravity
-	velocity += get_gravity() * delta
+	velocity += (get_gravity() * 0.6) * delta
 
 	# Move and check for collisions
 	var collision := move_and_collide(velocity * delta)

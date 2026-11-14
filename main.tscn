@@ -32,7 +32,7 @@ texture = ExtResource("3_1bvp3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player" unique_id=360876611]
 position = Vector2(13.646666, -16.084219)
-polygon = PackedVector2Array(66.35329, -8.915815, 66.35329, -23.915815, 6.3532944, -63.91581, -38.6467, -63.91581, -93.6467, -23.915815, -93.6467, -8.915815, -18.646704, -8.915815, -18.646704, 61.084175, 1.3532944, 96.084175, 36.353294, 96.084175)
+polygon = PackedVector2Array(66.35329, -8.915815, 66.35329, -23.915815, 6.3532944, -63.91581, -38.6467, -63.91581, -93.6467, -23.915815, -93.6467, -8.915815, -63.646637, 96.08423, 36.353294, 96.084175)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1398085798]
 position = Vector2(90, 90)
