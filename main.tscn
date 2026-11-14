@@ -7,6 +7,38 @@
 [ext_resource type="Texture2D" uid="uid://ebyeu8ntoo8x" path="res://art/cat.webp" id="4_lquwl"]
 [ext_resource type="Texture2D" uid="uid://byy2o712bef4a" path="res://art/background.webp" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://jjp3dm2d11rc" path="res://game_over_ui.gd" id="7_272bh"]
+[ext_resource type="Texture2D" uid="uid://d376d5jlhvr51" path="res://art/animations/character movement 1.webp" id="8_move1"]
+[ext_resource type="Texture2D" uid="uid://desr00mua0up4" path="res://art/animations/character movement 2.webp" id="9_move2"]
+[ext_resource type="Texture2D" uid="uid://bunnr1skeaibn" path="res://art/animations/character movement 3.webp" id="10_move3"]
+[ext_resource type="Texture2D" uid="uid://d1r0vcdhh8rsm" path="res://art/animations/character movement 4.webp" id="11_move4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1bvp3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_move1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_move2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_move3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_move4")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tm2a6"]
 size = Vector2(180, 19)
@@ -25,11 +57,13 @@ scale = Vector2(0.2, 0.2)
 script = ExtResource("1_0xm2m")
 metadata/_edit_group_ = true
 
-[node name="Character" type="Sprite2D" parent="Player" unique_id=1041302682]
+[node name="Character" type="AnimatedSprite2D" parent="Player" unique_id=1041302682]
 texture_filter = 1
 position = Vector2(-9.1552734e-05, -6.1035156e-05)
 scale = Vector2(4.9999995, 4.9999995)
-texture = ExtResource("3_1bvp3")
+sprite_frames = SubResource("SpriteFrames_player")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player" unique_id=360876611]
 position = Vector2(13.646666, -16.084219)
